@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller // This annotation determines or finds which is in charge to solve a specific request
-public class MainController {
+public class SaludarController {
 
     @Autowired //
     SaludadorService saludadorService;
-    @GetMapping("/")
+    @GetMapping("/saludar")
     public String crazyName(@RequestParam String nombre, Model model) {
         // Ejemplo http://localhost:8080/?nombre=Elaine
         String saludo = saludadorService.getSaludo(nombre);
